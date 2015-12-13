@@ -23,3 +23,5 @@ Listing.destroy_all
 
 l1 = Listing.create(:home_type => "Apartment", :room_type => "Private Room", :accommodates => 4, :address => "Paddington, NSW")
 l2 = Listing.create(:home_type => "House", :room_type => "Entire House", :accommodates => 6, :address => "Balmain, NSW")
+
+#This is a review
