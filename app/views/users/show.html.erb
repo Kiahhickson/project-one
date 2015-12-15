@@ -1,7 +1,18 @@
 <h1>/users/:id = This should show all of the details of a particular user</h1>
 
-<p><b>Full Name:</b> <%= "#{ @user.first_name } #{ @user.last_name  }" %></p>
+<p><b>Full Name:</b> <%= "#{ @user.name}" %></p>
 
-<p><b>Email:</b> <%=  @user.email %></p>
+<p><b>Email:</b> <%=  @user.email %> </p>
 
 <p><b>Created At:</b> <%= @user.created_at.strftime( '%A, %B, %e, %Y' ) %></p>
+
+<p><b>User Listings:</b>
+
+<% @user.listings.each do |listing|  %>
+
+<p>
+  <%= link_to("#{ listing.home_type} || #{listing.room_type}", listing_path( listing ) ) %>
+</p>
+<% end %>
+
+</p>

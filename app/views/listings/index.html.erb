@@ -1,2 +1,8 @@
 <h1>Listings#index</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
+
+<% @listings.each do |listing|  %>
+
+<p>
+  <%= link_to("#{ listing.home_type} || #{listing.room_type}", listing_path( listing ) ) %>
+</p>
+<% end %>

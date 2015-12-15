@@ -1,0 +1,165 @@
+
+<body>
+  <!-- <div> -->
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"> wizairdbnb</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to('Sign In', login_path) %></li>
+        <li> <%= link_to('Sign Up', new_user_path) %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+
+</nav>
+</div>
+
+<!-- Warming Up -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+
+<!--Video Section-->
+<section class="content-section video-section">
+  <div class="pattern-overlay">
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=AKZSYhSRjdo',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h1>We're not in Kansas anymore</h1>  
+        <h3>Follow the yellow brick road and stay in unique places across the land</h3>
+     </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-search">
+    <form>
+      <ul class="search-inputs-list">
+        <li>
+          <div class="home-search-input-wrap"></div>
+        </li>
+        <li> 
+          <input id="checkin" type="text" class="datepicker hidden-xs hasDatepicker" name="reservation[start_date]" value="" placeholder="Check In">
+        </li>
+        <li>
+          <input id="checkout" type="text" class="datepicker hidden-xs hasDatepicker" name="reservation[end_date]" value="" placeholder="Check Out">
+        </li>
+        <li>
+          <select name="reservation[guests]" id="guestcount" placeholder="Guests" class="hidden-xs">
+      
+            <option value="1">1 Guest</option>
+          
+            <option value="2">2 Guests</option>
+          
+            <option value="3">3 Guests</option>
+          
+            <option value="4">4 Guests</option>
+          
+            <option value="5">5 Guests</option>
+          
+            <option value="6">6 Guests</option>
+          
+            <option value="7">7 Guests</option>
+          
+            <option value="8">8 Guests</option>
+          
+            <option value="9">9 Guests</option>
+          
+            <option value="10">10 Guests</option>
+          
+            <option value="11">11 Guests</option>
+          
+            <option value="12">12 Guests</option>
+      </select>
+        </li>
+        <li>
+          <button class="btn btn-primary btn-large"Search</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+
+
+</section>
+
+
+<div class="dark-body">
+  <div class="container">
+    <h2>Stay for an eternity</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-4 col-sm-12">
+          <div class="discover-item" style="background-image: url(http://res.cloudinary.com/div0moogk/image/upload/v1450156699/Screen_Shot_2015-12-15_at_4.02.48_pm_ul7kuk.png)">
+            <h2>The Enchanted Forest</h2>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="discover-item" style="background-image: url(http://res.cloudinary.com/div0moogk/image/upload/v1450156698/Screen_Shot_2015-12-15_at_4.06.05_pm_dad3ss.png)">
+            <h2>Emerald City</h2>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-6">
+          <div class="discover-item" style="background-image: url(http://res.cloudinary.com/div0moogk/image/upload/v1450153937/Screen_Shot_2015-12-14_at_8.12.25_pm_awupdq.png)">
+            <h2>China Town</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+       <div class="row">
+    <div class="col-md-12">
+      <p></p>
+    </div>
+  </div>
+      <div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-4 col-sm-12">
+          <div class="discover-item" style="background-image: url(http://res.cloudinary.com/div0moogk/image/upload/v1450156694/Screen_Shot_2015-12-15_at_3.57.24_pm_e9704z.png)">
+            <h2>The Dark Forest</h2>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="discover-item" style="background-image: url(http://res.cloudinary.com/div0moogk/image/upload/v1450153938/Screen_Shot_2015-12-14_at_7.51.44_pm_ymaapa.png)">
+            <h2>The Land of Oz</h2>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-6">
+          <div class="discover-item" style="background-image: url(http://res.cloudinary.com/div0moogk/image/upload/v1450156946/Screen_Shot_2015-12-15_at_4.07.34_pm_hk2d0m.png)">
+            <h2>The Poppy Fields</h2>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+<!-- </div>
+</div> -->
+
+
+</body>
+</html>

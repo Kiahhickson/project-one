@@ -1,2 +1,15 @@
 <h1>Listings#show</h1>
 <p>Find me in app/views/listings/show.html.erb</p>
+
+<p><b>Home Type:</b> <%= "#{ @listing.home_type}" %></p>
+
+<p><b>Room Type:</b> <%= "#{ @listing.room_type}" %></p>
+
+<p><b>Accommodates:</b> <%= "#{ @listing.accommodates}" %></p>
+
+<p><b>Address:</b> <%= "#{ @listing.address}" %></p>
+
+<p>
+  <b>Listing Owner:</b>
+  <%= link_to(@listing.user.name, @listing.user) %>
+</p>

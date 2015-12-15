@@ -21,20 +21,21 @@ ActiveRecord::Schema.define(version: 20151212003839) do
     t.text     "room_type"
     t.integer  "accommodates"
     t.text     "address"
+    t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "listing_id"
     t.text     "user_review"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.text     "first_name"
-    t.text     "last_name"
+    t.text     "name"
     t.text     "email"
     t.text     "password_digest"
     t.datetime "created_at",      null: false

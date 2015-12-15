@@ -2,7 +2,35 @@
 
 <% @users.each do |user|  %>
 <p>
-  <%= link_to("#{ user.first_name } #{ user.last_name  }", user_path( user ) ) %>
+  <%= link_to("#{ user.name}", user_path( user ) ) %>
 </p>
 
 <% end %>
+
+
+<div class="login-modal"><div class="bbm-wrapper" style="display: block;"><div class="bbm-modal bbm-modal--open" style="opacity: 1;"><div class="bbm-modal__topbar">
+  <ul>
+    <li class="bbm-modal__tab"><a href="#" id="login-tab" class="active">Log In</a></li>
+    <li class="bbm-modal__tab"><a href="#" id="signup-tab">Sign Up</a></li>
+  </ul>
+</div>
+
+<div class="my-container bbm-modal__views"><div class="bbm-modal__section">
+  <h1>Log In</h1>
+  <form class="login-form">
+    <input type="text" name="user[email]" class="login-email" placeholder="Email">
+    <input type="password" name="user[password]" class="login-password" placeholder="Password">
+    <button class="btn btn-primary btn-large btn-block login-button">Log In</button>
+  </form>
+  <div class="or-line">
+    <hr>
+    <h6>or</h6>
+  </div>
+  <button class="btn btn-primary btn-large btn-block guest-login">Guest Login</button>
+</div>
+
+<div class="session-errors">
+  <ul></ul>
+</div>
+</div>
+</div></div></div>

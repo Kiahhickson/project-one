@@ -9,9 +9,8 @@
 
 User.destroy_all
 
-u1 = User.create(:first_name => "Kiah", :last_name => "Hickson", :email => "kiah@gmail.com", :password_digest => 'chicken' )
-u2 = User.create(:first_name => "Leah", :last_name => "Hickson", :email => "Leah@gmail.com", :password_digest => 'chicken' )
-
+u1 = User.create(:name => "Kiah Hickson", :email => "kiah@gmail.com", :password_digest => 'chicken' )
+u2 = User.create(:name => "Leah Hickson", :email => "Leah@gmail.com", :password_digest => 'chicken' )
 
 
 #This is a listing
@@ -25,3 +24,43 @@ l1 = Listing.create(:home_type => "Apartment", :room_type => "Private Room", :ac
 l2 = Listing.create(:home_type => "House", :room_type => "Entire House", :accommodates => 6, :address => "Balmain, NSW")
 
 #This is a review
+#user_id     :integer
+#  user_review :text
+
+Review.destroy_all
+
+r1 = Review.create(:user_id => "Kiah", :user_review => "This house was geat to stay in")
+r2 = Review.create(:user_id => "Leah", :user_review => "This house was not veryy nice to stay in")
+
+#_________________________________________________
+
+# class User < ActiveRecord::Base
+#   has_many :listings
+#   has_many :reviews
+
+puts "Associating users and listings"
+u1.listings << l1
+u2.listings << l2
+puts "Associating users and reviews"
+u1.reviews << r1
+u2.reviews << r2
+puts "Associating listings and reviews"
+l1.reviews << r1
+l2.reviews << r2
+
+# class Listing < ActiveRecord::Base
+#   belongs_to :user 
+#   has_many :reviews
+
+# l1.user << u1
+# l2.user << u2
+# l1.reviews << r1
+# l2.reviews << r2
+
+
+# class Review < ActiveRecord::Base
+#   belongs_to :user
+#   belongs_to :listing
+
+# r1.user << u1
+# r2.user << u2

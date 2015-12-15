@@ -1,0 +1,32 @@
+%p.text-center
+  %img.img-circle(src="https://fillmurray.com/200/200")
+  
+  %span.glyphicon.glyphicon-heart-empty
+
+- if @user.errors.any?
+  %ol
+    - @user.errors.full_messages.each do |msg|
+      %li= msg
+
+- if flash[:error].present?
+  %p.bg-warning= flash[:error]
+
+= form_for @user do |f|
+  %div.form-group
+    = f.label :name
+    = f.text_field :name, :required => true, :class => 'form-control'
+  %div.form-group
+    = f.label :email
+    = f.email_field :email, :required => true, :class => 'form-control'
+  %div.form-group
+    = f.label :password
+    = f.password_field :password, :required => true, :class => 'form-control'
+  %div.form-group
+    = f.label :password_confirmation 
+    = f.password_field :password_confirmation, :required => true, :class => 'form-control'
+
+  = f.submit :class => 'btn btn-primary'
+
+/ <!-- create form - use from tunr
+/ form will submit to my users_controller follow tunr and link that says sign up needs to link to the sign-up/new controller
+/  -->

@@ -5,6 +5,7 @@ class CreateListings < ActiveRecord::Migration
       t.text :room_type
       t.integer :accommodates
       t.text :address
+      t.integer :user_id
       t.timestamps null: false
     end
   end
