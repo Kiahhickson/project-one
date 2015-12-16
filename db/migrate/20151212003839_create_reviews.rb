@@ -3,9 +3,14 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.integer :user_id
       t.integer :listing_id
-      t.text :user_review
+      t.text :user_review    
+      t.integer :rating
       t.timestamps null: false
     end
   end
 end
+
+
+
+
 

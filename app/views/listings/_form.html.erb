@@ -1,0 +1,62 @@
+<%=  form_for @listing do |f| %>
+  <p>
+    <%= f.label :hero_picture %>
+    <%= f.text_field :hero_picture, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :price %>
+    <%= f.text_field :price, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :home_type %>
+    <%= f.text_field :home_type, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :room_type %>
+    <%= f.text_field :room_type, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :accommodates %>
+    <%= f.text_field :accommodates, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :bedrooms %>
+    <%= f.text_field :bedrooms, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :beds %>
+    <%= f.text_field :beds, :required => true %>
+  </p>
+  
+  <p>
+    <%= f.label :bathrooms %>
+    <%= f.text_field :bathrooms, :required => true %>
+  </p>
+   
+  <%= f.submit %>
+
+<% end %>
+
+
+  

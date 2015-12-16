@@ -1,5 +1,15 @@
 <h1>Listings#show</h1>
-<p>Find me in app/views/listings/show.html.erb</p>
+
+
+<p><b>Hero Picture:</b> <%= "#{ @listing.hero_picture}" %></p>
+
+<p><b>Title:</b> <%= "#{ @listing.title}" %></p>
+
+<p><b>Address:</b> <%= "#{ @listing.address}" %></p>
+
+<p><b>Description:</b> <%= "#{ @listing.description}" %></p>
+
+<p><b>Price:</b> <%= "#{ @listing.price}" %></p>
 
 <p><b>Home Type:</b> <%= "#{ @listing.home_type}" %></p>
 
@@ -7,9 +17,39 @@
 
 <p><b>Accommodates:</b> <%= "#{ @listing.accommodates}" %></p>
 
-<p><b>Address:</b> <%= "#{ @listing.address}" %></p>
+<p><b>Bedrooms:</b> <%= "#{ @listing.bedrooms}" %></p>
+
+<p><b>Beds:</b> <%= "#{ @listing.beds}" %></p>
+
+<p><b>Bathrooms:</b> <%= "#{ @listing.bathrooms}" %></p>
 
 <p>
   <b>Listing Owner:</b>
   <%= link_to(@listing.user.name, @listing.user) %>
 </p>
+
+<% if @listing.owner?(@current_user) %>
+<p>
+  <%= link_to("edit", edit_listing_path(@listing) ) %>
+</p>
+<%end%>
+
+<!-- review form -->
+<p> 
+<%= form_for [@listing, Review.new] do |f| %>
+  User review here <%= f.text_area :user_review %>
+  User rating 1- 10 here  <%= f.number_field :rating %>
+    <%= f.submit %>
+   <% end %>
+</p>
+
+<p>
+ <% @listing.reviews.each do |r| %>
+   <p>User Name: <%= r.user.name %> </p>
+   <p>User Review: <%= r.user_review %> </p>
+   <p>User Rating: <%= r.rating %></p>
+   <p>Date: <%= r.created_at %></p>
+   
+   
+ </p>
+<% end %>  

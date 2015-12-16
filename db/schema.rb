@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20151212003839) do
     t.integer  "accommodates"
     t.text     "address"
     t.integer  "user_id"
+    t.text     "title"
+    t.integer  "price"
+    t.integer  "bedrooms"
+    t.integer  "beds"
+    t.integer  "bathrooms"
+    t.text     "description"
+    t.text     "hero_picture"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -30,6 +37,7 @@ ActiveRecord::Schema.define(version: 20151212003839) do
     t.integer  "user_id"
     t.integer  "listing_id"
     t.text     "user_review"
+    t.integer  "rating"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

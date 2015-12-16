@@ -6,10 +6,18 @@ class CreateListings < ActiveRecord::Migration
       t.integer :accommodates
       t.text :address
       t.integer :user_id
+      t.text :title
+      t.integer :price
+      t.integer :bedrooms
+      t.integer :beds
+      t.integer :bathrooms
+      t.text :description
+      t.text :hero_picture
       t.timestamps null: false
     end
   end
 end
+
 
 
 
