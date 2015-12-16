@@ -8,12 +8,12 @@
 
 User.destroy_all
 
-u1 = User.create(:name => "River Fairy", :email => "riverfairy@gmail.com", :password_digest => 'password' )
-u2 = User.create(:name => "Evenora East", :email => "evenoraeast@gmail.com", :password_digest => 'password' )
-u3 = User.create(:name => "China Girl", :email => "chinagirl@gmail.com", :password_digest => 'password' )
-u4 = User.create(:name => "Theodora West", :email => "theodorawest@gmail.com", :password_digest => 'password' )
-u5 = User.create(:name => "Glinda Good", :email => "glindagood@gmail.com", :password_digest => 'password' )
-u6 = User.create(:name => "Oz Wizard", :email => "ozwizard@gmail.com", :password_digest => 'password' )
+u1 = User.create(:name => "River Fairy", :email => "riverfairy@gmail.com", :password => 'password', :password_confirmation => 'password')
+u2 = User.create(:name => "Evenora East", :email => "evenoraeast@gmail.com", :password => 'password', :password_confirmation => 'password')
+u3 = User.create(:name => "China Girl", :email => "chinagirl@gmail.com", :password => 'password', :password_confirmation => 'password')
+u4 = User.create(:name => "Theodora West", :email => "theodorawest@gmail.com", :password => 'password', :password_confirmation => 'password')
+u5 = User.create(:name => "Glinda Good", :email => "glindagood@gmail.com", :password => 'password', :password_confirmation => 'password')
+u6 = User.create(:name => "Oz Wizard", :email => "ozwizard@gmail.com", :password => 'password', :password_confirmation => 'password')
 
 #This is a listing
 #  home_type    :text

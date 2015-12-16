@@ -24,18 +24,15 @@ class ListingsController < ApplicationController
    redirect_to listing_path
   end
 
+  def show
+    @listing = Listing.find params[:id]
+  end
 
   def destroy
     listing = Listing.find params[:id]
     listing.destroy
     redirect_to listing_path
   end
-
-
-  def show
-    @listing = Listing.find params[:id]
-  end
-
 
   private 
   def listing_params
