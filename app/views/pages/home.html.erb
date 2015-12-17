@@ -74,6 +74,27 @@
   </div>
 
   <div class="row">
+    <% @listings.each_slice(3) do |trio| %>
+      <div class="row">
+        <% trio.each do |listing| %>
+        <div class="col-md-4 col-sm-12">
+          <a href="<%= listing_path(listing) %>">
+          <div class="discover-item" style="background-image: url(<%= listing.hero_picture %>)">
+            <h2><%= listing.description %></h2>
+          </div>
+          </a>
+        </div>
+        <% end %>
+      </div>
+     <div class="row">
+      <div class="col-md-12">
+        <p></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <!--div class="row">
     <div class="col-md-12">
 
         <div class="col-md-4 col-sm-12">
@@ -125,6 +146,6 @@
       </div>
   </div>
 </div>
-</div>
+</div-->
 <!-- </div>
 </div> -->
