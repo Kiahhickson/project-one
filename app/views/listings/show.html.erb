@@ -43,8 +43,7 @@
         <p><b>Host: </b><%= link_to(@listing.user.name, @listing.user) %></p>
 
         <% if @listing.owner?(@current_user) %>
-          <p><%= link_to("edit", edit_listing_path(@listing) ) %></p>
-          <p><%= link_to("Delete", listing_path(@listing), :method => :delete, :data => { :confirm => 'Are you sure?' }) %></p
+          <p><%= link_to("Edit", edit_listing_path(@listing) ) %> || <%= link_to("Delete", listing_path(@listing), :method => :delete, :data => { :confirm => 'Are you sure?' }) %></p
 
         <%end%>
       
