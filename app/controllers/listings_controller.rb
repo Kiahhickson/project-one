@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   def index
     @listings = Listing.all
+    @listings = @current_user.listings
   end
 
   def new
@@ -16,10 +17,12 @@ class ListingsController < ApplicationController
 
   def edit
     @listing = Listing.find params[:id]
+    redirect_to root_path unless @listing.user == @current_user
   end
 
   def update
    listing = Listing.find params[:id]
+   redirect_to root_path unless listing.user == @current_user
    listing.update listing_params
    redirect_to listing_path
   end
@@ -31,7 +34,7 @@ class ListingsController < ApplicationController
   def destroy
     listing = Listing.find params[:id]
     listing.destroy
-    redirect_to listing_path
+    redirect_to listings_path
   end
 
   private 
