@@ -1,28 +1,31 @@
-== README
+I created Wizairdbnb - An airbnb inspired web page to assist both the tourists and locals in the Land of Oz with unique and alternative accommodation. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I noticed there was a gap in the market for alternative accommodation sources in the Land of Oz and sought to fix that problem by creating a platform that is easy to navigate as both a user and supplier of accommodation.
 
-Things you may want to cover:
+I built this platform using the following:
 
-* Ruby version
+- Back-end
+* Ruby on Rails
+* SQL/CRUD system
+* Gems
 
-* System dependencies
+- Front-end
+* Bootstrap
+* CSS
+* Heroku
+* Cloudinary.
 
-* Configuration
+Along my journey I encountered multiple problems with the Wicked Witch of the West who cast a spell on me called imposter syndrome.. She also had a tendancy to break my code when she got angry and also ruined important infrastructure that was a key component to the success of this project. 
 
-* Database creation
+Once the Wicked Witch of the West was defeated by Oz the Great and Powerful the spell wore off and my fellow friends Jack and Joel joined the quest to assist me with completing wizairdbnb. 
 
-* Database initialization
+I did not conjur up enough front-end magic within the time-frame but I will be working on this on my two week break.
 
-* How to run the test suite
+Here is the project in its current state. 
 
-* Services (job queues, cache servers, search engines, etc.)
+https://wizairdbnb.herokuapp.com/
 
-* Deployment instructions
+- Kiah
+ 
 
-* ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
